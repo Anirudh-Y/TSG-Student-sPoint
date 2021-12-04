@@ -10,15 +10,15 @@ function App() {
   return (
     <div className="app">
       <NavBar/>
-      {/* <HashRouter>
+      <HashRouter>
         <Routes>
           <Route exact path='/' element={<Student/>} /> 
           <Route exact path='/career' element={<Career/>} /> 
         </Routes>
-      </HashRouter> */}
-      
+      </HashRouter>
+{/*       
       <Student/> 
-       <Career/>
+       <Career/> */}
     </div>
   );
 }
