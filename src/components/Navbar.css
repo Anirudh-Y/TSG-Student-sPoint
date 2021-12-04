@@ -1,0 +1,12 @@
+.navbar_divs{
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1f2428;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar_divs p{
+    color: white;
+    align-items: center;
+}
