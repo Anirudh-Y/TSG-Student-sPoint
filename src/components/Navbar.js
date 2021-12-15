@@ -49,7 +49,7 @@ function NavBar() {
                 </Nav.Link>
             </Nav.Item>
             <NavDropdown style={{color:"white"}} title="STUDENT'S POINT" id="nav-dropdown">
-                <NavDropdown.Item eventKey="8.1" href='/'>
+                <NavDropdown.Item eventKey="8.1" href='/student'>
                     <p style={{color:"black"}}>Academic Point</p>
                 </NavDropdown.Item>
                 <NavDropdown.Item eventKey="8.2" href='/career' >
