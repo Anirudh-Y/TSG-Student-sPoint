@@ -1,12 +1,39 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import MultiActionAreaCard from './MultiActionCard'
 import Carousel from 'react-bootstrap/Carousel'
-import "./Carousel.css"
+import Aos from 'aos';
+// import "aos/dist/aos.css";
+import "./Carousel.css";
+
 
 
 function CarouselComponent(props) {
+
+
+    useEffect(() => {
+
+    Aos.init({duration:2000})
+        
+        const observer=new IntersectionObserver(entries=>{
+    
+            entries.forEach(entry=>{
+                if(entry.isIntersecting){
+                    entry.target.classList.add('.square_animation');
+                    return;
+                }
+        
+                entry.target.classList.remove('.carousel_animation');
+                
+            })
+        
+        })
+        
+        observer.observe(document.querySelector('.carousel'));
+    }, [])
+
+
     return (
-        <div className='carousel'>
+        <div className='carousel' data-aos="fade-up">
             <Carousel fade className='carousel_com' variant={props.color}>
                 {/* <Carousel.Item className='carousel_item'>
                     <MultiActionAreaCard

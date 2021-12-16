@@ -1,10 +1,17 @@
 import MultiActionAreaCard from './components/MultiActionCard';
 import CarouselComponent from './components/Carousel';
 import list from './components/listOfDepInfo';
-import React from 'react'
+import React,{useEffect} from 'react'
+import Aos from "aos"
 import "./Student.css"
 
 function Student() {
+
+    useEffect(()=>{
+    Aos.init({duration:1000})
+
+    },)
+
     return (
         <div className="student">
             <div className='student_title'>
@@ -44,10 +51,10 @@ function Student() {
                 <CarouselComponent list={list} year="FIFTH YEAR" color="white" />
 
             </div>
-            <div className="student_questionBot">
+            <div className="student_questionBot" data-aos="fade-up">
                 <h1>PREVIOUS YEAR PAPERS</h1>
                 <div className="student_question">
-                    <MultiActionAreaCard
+                    <MultiActionAreaCard 
                         title="Previous Year Papers"
                         link="https://qp.metakgp.org/"
                         img="https://images.pexels.com/photos/239548/pexels-photo-239548.jpeg?cs=srgb&dl=pexels-pew-nguyen-239548.jpg&fm=jpg"
